@@ -1,0 +1,1273 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Feliz 1 ano, Meu Amor!</title>
+    
+    <!-- Importando Google Fonts para uma tipografia mais romântica -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Lora:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <!-- Importando Tailwind CSS para estilização rápida -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Configurando Tailwind com paleta de cores personalizada e fontes -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        rose: {
+                            50: '#fff1f2',
+                            100: '#ffe4e6',
+                            200: '#fecdd3',
+                            300: '#fda4af',
+                            400: '#fb7185',
+                            500: '#f43f5e',
+                            600: '#e11d48',
+                            700: '#be123c',
+                            800: '#9f1239',
+                            900: '#881337',
+                        },
+                        sand: {
+                            50: '#fdfbf7',
+                            100: '#f7f3e8',
+                            200: '#eedfc3',
+                            300: '#e1c69a',
+                        }
+                    },
+                    fontFamily: {
+                        'titulo': ['"Dancing Script"', 'cursive'],
+                        'texto': ['"Lora"', 'serif'],
+                        'ui': ['"Montserrat"', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'polaroid': '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06), 0 10px 15px -3px rgba(0, 0, 0, 0.1)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Animação suave para a entrada dos elementos */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .animate-fade-in {
+            animation: fadeIn 1s ease-out forwards;
+            opacity: 0;
+        }
+
+        /* Atrasos para a animação para elementos entrarem em sequência */
+        .delay-100 { animation-delay: 0.1s; }
+        .delay-200 { animation-delay: 0.2s; }
+        .delay-300 { animation-delay: 0.3s; }
+        .delay-400 { animation-delay: 0.4s; }
+
+        /* Estilo para o efeito de batida do coração */
+        @keyframes heartbeat {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+        .heart-beat {
+            display: inline-block;
+            animation: heartbeat 1.5s infinite ease-in-out;
+            color: #e11d48; /* Cor rose-600 do tailwind */
+        }
+
+
+/*Pedido de namoro*/
+
+    /* Estilo do container e efeito Polaroid */
+    .polaroid-card {
+        background-color: #ffffff;
+        padding: 1rem;
+        padding-bottom: 4rem;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06), 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        border-radius: 0.125rem;
+        transition: all 0.5s ease-in-out;
+        position: relative;
+        width: 100%;
+        max-width: 28rem;
+    }
+
+    .polaroid-card:hover {
+        transform: translateY(-0.5rem) rotate(1deg);
+    }
+
+    /* Container do Carrossel */
+    .carousel-container {
+        overflow: hidden;
+        border-radius: 0.25rem;
+        background-color: #f3f4f6;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        min-height: 300px;
+    }
+
+    /* Trilha que desliza as fotos e vídeos */
+    .carousel-track {
+        display: flex;
+        width: 100%;
+        transition: transform 0.5s ease-in-out;
+    }
+
+    /* Cada item (foto ou vídeo) dentro do carrossel */
+    .carousel-item {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        flex-shrink: 0;
+    }
+
+    /* Botões de navegação do carrossel */
+    .carousel-btn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(255, 255, 255, 0.7);
+        color: #e11d48; /* Cor Rose-600 */
+        border-radius: 9999px;
+        padding: 0.5rem;
+        box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+        transition: background-color 0.2s;
+        z-index: 10;
+        border: none;
+        cursor: pointer;
+    }
+
+    .carousel-btn:hover {
+        background-color: rgba(255, 255, 255, 1);
+    }
+
+    .carousel-btn-left { left: 0.5rem; }
+    .carousel-btn-right { right: 0.5rem; }
+
+    /* Indicadores (bolinhas) */
+    .carousel-indicators {
+        position: absolute;
+        bottom: 0.5rem;
+        left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        gap: 0.5rem;
+        z-index: 10;
+    }
+
+    .carousel-dot {
+        width: 0.5rem;
+        height: 0.5rem;
+        border-radius: 9999px;
+        background-color: #ffffff;
+        transition: opacity 0.2s;
+    }
+
+
+    /*footer*/
+    footer{
+        font-size: 30px; 
+         }
+
+    </style>
+</head>
+
+<body class="bg-sand-50 text-gray-800 font-texto antialiased min-h-screen selection:bg-rose-200 selection:text-rose-900">
+
+    <div class="max-w-4xl mx-auto px-4 py-12 md:py-20 flex flex-col items-center">
+        
+        <!-- Cabeçalho -->
+        <header class="text-center mb-16 animate-fade-in">
+            <h1 class="font-titulo text-5xl md:text-7xl text-rose-700 mb-4 drop-shadow-sm">Feliz 1 Ano! <span class="heart-beat">♥</span></h1>
+            <p class="font-ui text-lg text-gray-500 uppercase tracking-widest">Nosso primeiro capítulo de muitos</p>
+        </header>
+
+        <!-- Seção de Tempo Juntos (Cronômetro) -->
+        <section class="w-full bg-white rounded-3xl shadow-xl p-8 md:p-12 mb-16 relative overflow-hidden animate-fade-in delay-100">
+            <!-- Decoração de fundo -->
+            <div class="absolute top-0 right-0 -mr-16 -mt-16 w-48 h-48 bg-rose-100 rounded-full mix-blend-multiply filter blur-xl opacity-70"></div>
+            <div class="absolute bottom-0 left-0 -ml-16 -mb-16 w-56 h-56 bg-sand-200 rounded-full mix-blend-multiply filter blur-xl opacity-70"></div>
+            
+            <div class="relative z-10">
+                <h2 class="font-ui text-xl md:text-2xl font-semibold text-center text-rose-800 mb-8 tracking-wide uppercase">Estamos juntos há...</h2>
+                
+                <div class="grid grid-cols-2 md:grid-cols-6 gap-4 text-center font-ui">
+                    <!-- Anos -->
+                    <div class="bg-rose-50 rounded-2xl p-4 flex flex-col justify-center items-center shadow-sm border border-rose-100">
+                        <span id="anos" class="text-3xl md:text-4xl font-bold text-rose-600">0</span>
+                        <span class="text-xs md:text-sm text-gray-500 font-medium mt-1">Ano(s)</span>
+                    </div>
+                    <!-- Meses -->
+                    <div class="bg-rose-50 rounded-2xl p-4 flex flex-col justify-center items-center shadow-sm border border-rose-100">
+                        <span id="meses" class="text-3xl md:text-4xl font-bold text-rose-600">0</span>
+                        <span class="text-xs md:text-sm text-gray-500 font-medium mt-1">Meses</span>
+                    </div>
+                    <!-- Dias -->
+                    <div class="bg-rose-50 rounded-2xl p-4 flex flex-col justify-center items-center shadow-sm border border-rose-100">
+                        <span id="dias" class="text-3xl md:text-4xl font-bold text-rose-600">0</span>
+                        <span class="text-xs md:text-sm text-gray-500 font-medium mt-1">Dias</span>
+                    </div>
+                    <!-- Horas -->
+                    <div class="bg-white rounded-2xl p-4 flex flex-col justify-center items-center shadow border border-gray-100">
+                        <span id="horas" class="text-3xl md:text-4xl font-bold text-gray-700">00</span>
+                        <span class="text-xs md:text-sm text-gray-400 font-medium mt-1">Horas</span>
+                    </div>
+                    <!-- Minutos -->
+                    <div class="bg-white rounded-2xl p-4 flex flex-col justify-center items-center shadow border border-gray-100">
+                        <span id="minutos" class="text-3xl md:text-4xl font-bold text-gray-700">00</span>
+                        <span class="text-xs md:text-sm text-gray-400 font-medium mt-1">Minutos</span>
+                    </div>
+                    <!-- Segundos -->
+                    <div class="bg-white rounded-2xl p-4 flex flex-col justify-center items-center shadow border border-gray-100">
+                        <span id="segundos" class="text-3xl md:text-4xl font-bold text-gray-700">00</span>
+                        <span class="text-xs md:text-sm text-gray-400 font-medium mt-1">Segundos</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- NOVA SEÇÃO: 1 Ano em... -->
+        <section class="w-full max-w-3xl bg-white rounded-3xl shadow-lg p-6 md:p-10 mb-16 animate-fade-in delay-200 border-t-4 border-rose-300">
+            <h2 class="font-ui text-xl md:text-2xl font-semibold text-center text-rose-700 mb-6 tracking-wide">Ou seja, 1 Ano significa...</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-center font-ui">
+                <div class="bg-sand-50 p-4 rounded-xl shadow-sm border border-sand-200 flex flex-col justify-center items-center">
+                    <span id="total-dias" class="text-3xl font-bold text-gray-800 mb-1">365</span>
+                    <span class="text-sm text-gray-500 uppercase tracking-wider">Dias Inteiros</span>
+                </div>
+                
+                <div class="bg-sand-50 p-4 rounded-xl shadow-sm border border-sand-200 flex flex-col justify-center items-center">
+                    <span id="total-horas" class="text-3xl font-bold text-gray-800 mb-1">8.760</span>
+                    <span class="text-sm text-gray-500 uppercase tracking-wider">Horas Compartilhadas</span>
+                </div>
+                
+                <div class="bg-sand-50 p-4 rounded-xl shadow-sm border border-sand-200 flex flex-col justify-center items-center">
+                    <span id="total-minutos" class="text-3xl font-bold text-gray-800 mb-1">525.600</span>
+                    <span class="text-sm text-gray-500 uppercase tracking-wider">Minutos Pensando em Você</span>
+                </div>
+                
+                <div class="bg-sand-50 p-4 rounded-xl shadow-sm border border-sand-200 flex flex-col justify-center items-center">
+                    <span id="total-segundos" class="text-3xl font-bold text-gray-800 mb-1">31.536.000</span>
+                    <span class="text-sm text-gray-500 uppercase tracking-wider">Segundos de Felicidade</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção de Texto -->
+        <section class="max-w-2xl text-center mb-20 animate-fade-in delay-200">
+            <div class="text-rose-400 text-4xl mb-4 font-serif">"</div>
+            <p class="text-lg md:text-xl leading-relaxed text-gray-700 italic">
+                Neste último ano, descobri que a felicidade tem o seu sorriso e o conforto tem o seu abraço. 
+                Cada momento ao seu lado se transformou em uma memória preciosa que guardo com muito carinho. 
+                Obrigado por ser essa pessoa incrível e por fazer a minha vida muito mais colorida. 
+                Eu te amo mais do que as palavras podem expressar, e mal posso esperar por todos os anos que ainda virão.
+            </p>
+            <div class="text-rose-400 text-4xl mt-2 font-serif">"</div>
+        </section>
+
+        <!-- Seção de Fotos (AGORA COM CARROSSEL) -->
+        <section class="w-full mb-20">
+            <h2 class="font-ui text-2xl font-semibold text-center text-rose-800 mb-12 tracking-wide uppercase animate-fade-in delay-300">Nossos Momentos</h2>
+            
+            <!-- Alterado para suportar 2 colunas simétricas para equilibrar as 4 fotos -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12">
+                
+                <!-- Foto 1 (Carrossel) -->
+                <div class="flex flex-col items-center animate-fade-in delay-300 group">
+                    <div class="bg-white p-4 pb-16 md:p-6 md:pb-20 shadow-polaroid rounded-sm transform transition duration-500 hover:-translate-y-2 hover:rotate-2 relative w-full max-w-md">
+                        
+                        <div class="overflow-hidden rounded bg-gray-100 flex items-center justify-center relative min-h-[300px] carousel-container" data-slide="0">
+                            <!-- Fotos da Recordação 1 -->
+                            <div class="carousel-track flex w-full transition-transform duration-500 ease-in-out">
+                                <img src="img/IMG_20250427_013351_256.jpg" alt="Nossa primeira foto 1" class="w-full h-auto object-cover flex-shrink-0">
+                                <img src="img/IMG_20250427_165110_141.jpg" alt="Nossa primeira foto 2" class="w-full h-auto object-cover flex-shrink-0">
+                            </div>
+
+                            <!-- Controles do Carrossel -->
+                            <button class="absolute left-2 top-1/2 -translate-y-1/2 bg-white/70 hover:bg-white text-rose-600 rounded-full p-2 shadow-sm transition-colors z-10 prev-btn" aria-label="Foto anterior">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 256 256"><path d="M165.66,202.34a8,8,0,0,1-11.32,11.32l-80-80a8,8,0,0,1,0-11.32l80-80a8,8,0,0,1,11.32,11.32L91.31,128Z"></path></svg>
+                            </button>
+                            <button class="absolute right-2 top-1/2 -translate-y-1/2 bg-white/70 hover:bg-white text-rose-600 rounded-full p-2 shadow-sm transition-colors z-10 next-btn" aria-label="Próxima foto">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 256 256"><path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"></path></svg>
+                            </button>
+
+                            <!-- Indicadores de slide (bolinhas) -->
+                            <div class="absolute bottom-2 left-0 w-full flex justify-center gap-2 z-10 indicators">
+                                <span class="w-2 h-2 rounded-full bg-white opacity-100 transition-opacity"></span>
+                                <span class="w-2 h-2 rounded-full bg-white opacity-50 transition-opacity"></span>
+                            </div>
+                        </div>
+
+                        <div class="absolute bottom-4 md:bottom-6 w-full left-0 px-4 text-center">
+                            <p class="font-titulo text-2xl text-gray-800">
+                                A primeira vez que segurei sua mão...
+                            </p>
+                            <p class="font-ui text-sm text-rose-500 mt-1 uppercase tracking-widest">
+                                27 de Abril de 2025 <!-- Substitua pela data real -->
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Foto 2 (Carrossel) -->
+                <div class="flex flex-col items-center animate-fade-in delay-400 group">
+                    <div class="bg-white p-4 pb-16 md:p-6 md:pb-20 shadow-polaroid rounded-sm transform transition duration-500 hover:-translate-y-2 hover:-rotate-2 relative w-full max-w-md">
+                        
+                        <div class="overflow-hidden rounded bg-gray-100 flex items-center justify-center relative min-h-[300px] carousel-container" data-slide="0">
+                            <!-- Fotos da Recordação 2 -->
+                            <div class="carousel-track flex w-full transition-transform duration-500 ease-in-out">
+                                <img src="img/1000457047.jpg" alt="Nossa primeira viagem 1" class="w-full h-auto object-cover flex-shrink-0">
+                                <img src="img/IMG-20250924-WA0759.jpg" alt="Nossa primeira viagem 2" class="w-full h-auto object-cover flex-shrink-0">
+                            </div>
+
+                             <!-- Controles do Carrossel -->
+                             <button class="absolute left-2 top-1/2 -translate-y-1/2 bg-white/70 hover:bg-white text-rose-600 rounded-full p-2 shadow-sm transition-colors z-10 prev-btn" aria-label="Foto anterior">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 256 256"><path d="M165.66,202.34a8,8,0,0,1-11.32,11.32l-80-80a8,8,0,0,1,0-11.32l80-80a8,8,0,0,1,11.32,11.32L91.31,128Z"></path></svg>
+                            </button>
+                            <button class="absolute right-2 top-1/2 -translate-y-1/2 bg-white/70 hover:bg-white text-rose-600 rounded-full p-2 shadow-sm transition-colors z-10 next-btn" aria-label="Próxima foto">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 256 256"><path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"></path></svg>
+                            </button>
+
+                             <!-- Indicadores de slide (bolinhas) -->
+                             <div class="absolute bottom-2 left-0 w-full flex justify-center gap-2 z-10 indicators">
+                                <span class="w-2 h-2 rounded-full bg-white opacity-100 transition-opacity"></span>
+                                <span class="w-2 h-2 rounded-full bg-white opacity-50 transition-opacity"></span>
+                            </div>
+                        </div>
+
+                        <div class="absolute bottom-4 md:bottom-6 w-full left-0 px-4 text-center">
+                            <p class="font-titulo text-2xl text-gray-800">
+                                Nossa primeira viagem juntos ♥
+                            </p>
+                            <p class="font-ui text-sm text-rose-500 mt-1 uppercase tracking-widest">
+                                24 de Setembro de 2025 <!-- Substitua pela data real -->
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Foto 4 (Carrossel) - Formatura -->
+                <div class="flex flex-col items-center animate-fade-in delay-500 group">
+                    <div class="bg-white p-4 pb-16 md:p-6 md:pb-20 shadow-polaroid rounded-sm transform transition duration-500 hover:-translate-y-2 hover:-rotate-1 relative w-full max-w-md mx-auto">
+                        
+                        <div class="overflow-hidden rounded bg-gray-100 flex items-center justify-center relative min-h-[300px] carousel-container" data-slide="0">
+                            <!-- Fotos da Formatura -->
+                            <div class="carousel-track flex w-full transition-transform duration-500 ease-in-out">
+                                <img src="img/IMG-20260318-WA0092.jpg" alt="Nossa formatura 1" class="w-full h-auto object-cover flex-shrink-0">
+                                <img src="img/IMG-20260318-WA0097.jpg" alt="Nossa formatura 2" class="w-full h-auto object-cover flex-shrink-0">
+                                <img src="img/IMG-20260318-WA0095.jpg" alt="Nossa formatura 2" class="w-full h-auto object-cover flex-shrink-0">
+
+                            </div>
+
+                             <!-- Controles do Carrossel -->
+                             <button class="absolute left-2 top-1/2 -translate-y-1/2 bg-white/70 hover:bg-white text-rose-600 rounded-full p-2 shadow-sm transition-colors z-10 prev-btn" aria-label="Foto anterior">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 256 256"><path d="M165.66,202.34a8,8,0,0,1-11.32,11.32l-80-80a8,8,0,0,1,0-11.32l80-80a8,8,0,0,1,11.32,11.32L91.31,128Z"></path></svg>
+                            </button>
+                            <button class="absolute right-2 top-1/2 -translate-y-1/2 bg-white/70 hover:bg-white text-rose-600 rounded-full p-2 shadow-sm transition-colors z-10 next-btn" aria-label="Próxima foto">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 256 256"><path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"></path></svg>
+                            </button>
+
+                             <!-- Indicadores de slide (bolinhas) -->
+                             <div class="absolute bottom-2 left-0 w-full flex justify-center gap-2 z-10 indicators">
+                                <span class="w-2 h-2 rounded-full bg-white opacity-100 transition-opacity"></span>
+                                <span class="w-2 h-2 rounded-full bg-white opacity-50 transition-opacity"></span>
+                                <span class="w-2 h-2 rounded-full bg-white opacity-50 transition-opacity"></span>
+ 
+                            </div>
+                        </div>
+
+                        <div class="absolute bottom-4 md:bottom-6 w-full left-0 px-4 text-center">
+                            <p class="font-titulo text-2xl text-gray-800">
+                                O dia da nossa Formatura 🎓
+                            </p>
+                            <p class="font-ui text-sm text-rose-500 mt-1 uppercase tracking-widest">
+                               13 de Dezembro de 2025
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Foto 5 (Carrossel) - NOVA: Colação de Grau -->
+                <div class="flex flex-col items-center animate-fade-in delay-500 group">
+                    <div class="bg-white p-4 pb-16 md:p-6 md:pb-20 shadow-polaroid rounded-sm transform transition duration-500 hover:-translate-y-2 hover:-rotate-1 relative w-full max-w-md mx-auto">
+                        
+                        <div class="overflow-hidden rounded bg-gray-100 flex items-center justify-center relative min-h-[300px] carousel-container" data-slide="0">
+                            <!-- Fotos da Colação -->
+                            <div class="carousel-track flex w-full transition-transform duration-500 ease-in-out">
+                                <img src="img/IMG-20251218-WA0004.jpg" alt="Nossa colação 1" class="w-full h-auto object-cover flex-shrink-0">
+                                <img src="img/20251218_214458.jpg" alt="Nossa colação 2" class="w-full h-auto object-cover flex-shrink-0">
+                            </div>
+
+                             <!-- Controles do Carrossel -->
+                             <button class="absolute left-2 top-1/2 -translate-y-1/2 bg-white/70 hover:bg-white text-rose-600 rounded-full p-2 shadow-sm transition-colors z-10 prev-btn" aria-label="Foto anterior">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 256 256"><path d="M165.66,202.34a8,8,0,0,1-11.32,11.32l-80-80a8,8,0,0,1,0-11.32l80-80a8,8,0,0,1,11.32,11.32L91.31,128Z"></path></svg>
+                            </button>
+                            <button class="absolute right-2 top-1/2 -translate-y-1/2 bg-white/70 hover:bg-white text-rose-600 rounded-full p-2 shadow-sm transition-colors z-10 next-btn" aria-label="Próxima foto">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 256 256"><path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"></path></svg>
+                            </button>
+
+                             <!-- Indicadores de slide (bolinhas) -->
+                             <div class="absolute bottom-2 left-0 w-full flex justify-center gap-2 z-10 indicators">
+                                <span class="w-2 h-2 rounded-full bg-white opacity-100 transition-opacity"></span>
+                                <span class="w-2 h-2 rounded-full bg-white opacity-50 transition-opacity"></span>
+                            </div>
+                        </div>
+
+                        <div class="absolute bottom-4 md:bottom-6 w-full left-0 px-4 text-center">
+                            <p class="font-titulo text-2xl text-gray-800">
+                                Nossa colação de grau 🎓
+                            </p>
+                            <p class="font-ui text-sm text-rose-500 mt-1 uppercase tracking-widest">
+                                17 e 18 Janeiro de 2026
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- NOVA MEMÓRIA: O dia que viramos namorados (2 Fotos + 1 Vídeo) -->
+                <div class="flex flex-col items-center animate-fade-in delay-500 group md:col-span-2 mx-auto w-full max-w-md">
+                    <div class="bg-white p-4 pb-16 md:p-6 md:pb-20 shadow-polaroid rounded-sm transform transition duration-500 hover:-translate-y-2 hover:rotate-1 relative w-full">
+                        
+                        <div class="overflow-hidden rounded bg-gray-100 flex items-center justify-center relative min-h-[300px] carousel-container" data-slide="0">
+                            <!-- 2 Fotos e 1 Vídeo no carrossel -->
+                            <div class="carousel-track flex w-full transition-transform duration-500 ease-in-out">
+                                <!-- Foto 1 do dia do pedido -->
+                                <img src="img/IMG-20251129-WA0019.jpg" alt="Nosso pedido de namoro 1" class="w-full h-auto object-cover flex-shrink-0">
+                                <!-- Foto 2 do dia do pedido -->
+                                <img src="img/IMG-20251129-WA0019 (1).jpg" alt="Nosso pedido de namoro 2" class="w-full h-auto object-cover flex-shrink-0">
+                                
+                        
+                            </div>
+
+                             <!-- Controles do Carrossel -->
+                             <button class="absolute left-2 top-1/2 -translate-y-1/2 bg-white/70 hover:bg-white text-rose-600 rounded-full p-2 shadow-sm transition-colors z-10 prev-btn" aria-label="Foto anterior">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 256 256"><path d="M165.66,202.34a8,8,0,0,1-11.32,11.32l-80-80a8,8,0,0,1,0-11.32l80-80a8,8,0,0,1,11.32,11.32L91.31,128Z"></path></svg>
+                            </button>
+                            <button class="absolute right-2 top-1/2 -translate-y-1/2 bg-white/70 hover:bg-white text-rose-600 rounded-full p-2 shadow-sm transition-colors z-10 next-btn" aria-label="Próxima foto">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 256 256"><path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"></path></svg>
+                            </button>
+
+                             <!-- Indicadores de slide (bolinhas) -->
+                             <div class="absolute bottom-2 left-0 w-full flex justify-center gap-2 z-10 indicators">
+                                <span class="w-2 h-2 rounded-full bg-white opacity-100 transition-opacity"></span>
+                                <span class="w-2 h-2 rounded-full bg-white opacity-50 transition-opacity"></span>
+                            </div>
+                        </div>
+
+                        <div class="absolute bottom-4 md:bottom-6 w-full left-0 px-4 text-center">
+                            <p class="font-titulo text-2xl text-gray-800">
+                                O dia que viramos namorados 💍❤️
+                            </p>
+                            <p class="font-ui text-sm text-rose-500 mt-1 uppercase tracking-widest">
+                                28 de Novembro de 2025
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- VÍDEO DO PEDIDO DE NAMORO (Logo abaixo da recordação do pedido) -->
+                <div class="flex flex-col items-center animate-fade-in delay-500 group md:col-span-2 mx-auto w-full max-w-md mt-6">
+                    <div class="bg-white p-4 pb-16 md:p-6 md:pb-20 shadow-polaroid rounded-sm transform transition duration-500 hover:-translate-y-2 relative w-full">
+                        <div class="overflow-hidden rounded bg-gray-100 flex items-center justify-center relative min-h-[300px]">
+                            <video class="w-full h-[600px] object-cover" controls playsinline>
+                                <source src="vid/VID-20251128-WA0084.mp4" type="video/mp4">
+                             
+                            </video>
+                        </div>
+
+                        <div class="absolute bottom-4 md:bottom-6 w-full left-0 px-4 text-center">
+                            <p class="font-titulo text-2xl text-gray-800">
+                                Nosso vídeo especial do pedido 🎥❤️
+                            </p>
+                            <p class="font-ui text-sm text-rose-500 mt-1 uppercase tracking-widest">
+                                28 de Novembro de 2025
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- NOVA SEÇÃO: Galeria (Mural de Memórias) -->
+        <section class="w-full">
+            <h2 class="font-ui text-2xl font-semibold text-center text-rose-800 mb-8 tracking-wide uppercase animate-fade-in delay-300">Nosso Mural</h2>
+            <p class="text-center text-gray-500 font-ui text-sm mb-12 animate-fade-in delay-300">Mais momentos que enchem meu coração de alegria</p>
+            
+            <!-- Grid estilo Masonry (Mosaico) -->
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 animate-fade-in delay-400">
+                
+                <!-- Imagem Vertical (Ocupa 2 linhas) -->
+                <div class="row-span-2 group overflow-hidden rounded-xl shadow-md cursor-pointer relative" onclick="abrirModal(this)">
+                    <img src="img/IMG-20260627-WA0021.jpeg" alt="Galeria foto 1" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-rose-900/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="text-white font-ui font-medium">Ver</span>
+                    </div>
+                </div>
+
+                <!-- Imagem Quadrada -->
+                <div class="col-span-2 group overflow-hidden rounded-xl shadow-md cursor-pointer relative" onclick="abrirModal(this)">
+                    <img src="img/1000122884.jpg" alt="Galeria foto 2" class="w-full h-160 md:h-200 object-cover transition-transform duration-700 group-hover:scale-120">
+                    <div class="absolute inset-0 bg-rose-900/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="text-white font-ui font-medium">Ver</span>
+                    </div>
+                </div>
+
+    
+
+                 <!-- Imagem Horizontal (Ocupa 2 colunas em telas médias) -->
+                <div class="col-span-2 md:col-span-2 group overflow-hidden rounded-xl shadow-md cursor-pointer relative" onclick="abrirModal(this)">
+                    <img src="img/IMG-20250924-WA0778.jpg" alt="Galeria foto 3" class="w-full h-160 md:h-200 object-cover transition-transform duration-700 group-hover:scale-120">
+                    <div class="absolute inset-0 bg-rose-900/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="text-white font-ui font-medium">Ver</span>
+                    </div>
+                </div>
+
+                <!-- Imagem Quadrada -->
+                <div class="group overflow-hidden rounded-xl shadow-md cursor-pointer relative" onclick="abrirModal(this)">
+                    <img src="img/20260607_193241.jpg" alt="Galeria foto 4" class="w-full h-48 md:h-64 object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-rose-900/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="text-white font-ui font-medium">Ver</span>
+                    </div>
+                </div>
+
+                <!-- Imagem Quadrada -->
+                <div class="group overflow-hidden rounded-xl shadow-md cursor-pointer relative" onclick="abrirModal(this)">
+                    <img src="img/1000121806.jpg" alt="Galeria foto 4" class="w-full h-48 md:h-64 object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-rose-900/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="text-white font-ui font-medium">Ver</span>
+                    </div>
+                </div>
+
+                <!-- Imagem Quadrada -->
+                <div class="group overflow-hidden rounded-xl shadow-md cursor-pointer relative" onclick="abrirModal(this)">
+                    <img src="img/J.jpg" alt="Galeria foto 4" class="w-full h-48 md:h-64 object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-rose-900/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="text-white font-ui font-medium">Ver</span>
+                    </div>
+                </div>
+                
+
+                    <!-- Imagem Horizontal (Ocupa 2 colunas em telas médias) -->
+                <div class="col-span-2 md:col-span-2 group overflow-hidden rounded-xl shadow-md cursor-pointer relative" onclick="abrirModal(this)">
+                    <img src="img/IMG-20250928-WA0023.jpg" alt="Galeria foto 3" class="w-full h-48 md:h-80 object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-rose-900/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="text-white font-ui font-medium">Ver</span>
+                    </div>
+                </div>
+
+                <!-- Imagem Vertical (Ocupa 2 linhas) -->
+                <div class="row-span-2 group overflow-hidden rounded-xl shadow-md cursor-pointer relative" onclick="abrirModal(this)">
+                    <img src="img/IMG-20251214-WA0060.jpg" alt="Galeria foto 1" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-rose-900/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="text-white font-ui font-medium">Ver</span>
+                    </div>
+                </div>
+
+                <!-- Imagem Vertical (Ocupa 2 linhas) -->
+                <div class="row-span-2 group overflow-hidden rounded-xl shadow-md cursor-pointer relative" onclick="abrirModal(this)">
+                    <img src="img/IMG-20251214-WA0070.jpg" alt="Galeria foto 1" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-rose-900/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="text-white font-ui font-medium">Ver</span>
+                    </div>
+                </div>
+
+                  <!-- Imagem Vertical (Ocupa 2 linhas) -->
+                <div class="row-span-2 group overflow-hidden rounded-xl shadow-md cursor-pointer relative" onclick="abrirModal(this)">
+                    <img src="img/IMG-20251214-WA0073.jpg" alt="Galeria foto 1" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-rose-900/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="text-white font-ui font-medium">Ver</span>
+                    </div>
+                </div>
+
+                <!-- Imagem Vertical (Ocupa 2 linhas) -->
+                <div class="row-span-2 group overflow-hidden rounded-xl shadow-md cursor-pointer relative" onclick="abrirModal(this)">
+                    <img src="img/IMG-20260301-WA0162.jpg" alt="Galeria foto 1" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-rose-900/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="text-white font-ui font-medium">Ver</span>
+                    </div>
+                </div>
+
+                 <!-- Imagem Vertical (Ocupa 2 linhas) -->
+                <div class="row-span-2 group overflow-hidden rounded-xl shadow-md cursor-pointer relative" onclick="abrirModal(this)">
+                    <img src="img/IMG-20260711-WA0005.jpg" alt="Galeria foto 1" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-rose-900/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="text-white font-ui font-medium">Ver</span>
+                    </div>
+                </div>
+
+                <!-- Imagem Vertical (Ocupa 2 linhas) -->
+                <div class="row-span-2 group overflow-hidden rounded-xl shadow-md cursor-pointer relative" onclick="abrirModal(this)">
+                    <img src="img/IMG-20260318-WA0114.jpg" alt="Galeria foto 1" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-rose-900/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="text-white font-ui font-medium">Ver</span>
+                    </div>
+                </div>
+
+                <!-- Imagem Vertical (Ocupa 2 linhas) -->
+                <div class="row-span-2 group overflow-hidden rounded-xl shadow-md cursor-pointer relative" onclick="abrirModal(this)">
+                    <img src="img/1000457043.jpg" alt="Galeria foto 1" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-rose-900/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="text-white font-ui font-medium">Ver</span>
+                    </div>
+                </div>
+                <!-- Imagem Vertical (Ocupa 2 linhas) -->
+                <div class="row-span-2 group overflow-hidden rounded-xl shadow-md cursor-pointer relative" onclick="abrirModal(this)">
+                    <img src="img/1000457044.jpg" alt="Galeria foto 1" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-rose-900/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="text-white font-ui font-medium">Ver</span>
+                    </div>
+                </div>
+
+                <!-- Imagem Vertical (Ocupa 2 linhas) -->
+                <div class="row-span-2 group overflow-hidden rounded-xl shadow-md cursor-pointer relative" onclick="abrirModal(this)">
+                    <img src="img/20251128_191950.jpg" alt="Galeria foto 1" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-rose-900/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="text-white font-ui font-medium">Ver</span>
+                    </div>
+                </div>
+
+                <!-- Imagem Vertical (Ocupa 2 linhas) -->
+                <div class="row-span-2 group overflow-hidden rounded-xl shadow-md cursor-pointer relative" onclick="abrirModal(this)">
+                    <img src="img/Screenshot_20260628_005538_Instagram.jpg" alt="Galeria foto 1" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-rose-900/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="text-white font-ui font-medium">Ver</span>
+                    </div>
+                </div>
+
+                <!-- Imagem Vertical (Ocupa 2 linhas) -->
+                <div class="row-span-2 group overflow-hidden rounded-xl shadow-md cursor-pointer relative" onclick="abrirModal(this)">
+                    <img src="img/IMG_20251208_230420_270.jpg" alt="Galeria foto 1" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-rose-900/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="text-white font-ui font-medium">Ver</span>
+                    </div>
+                </div>
+
+                
+                 <!-- Imagem Vertical (Ocupa 2 linhas) -->
+                <div class="row-span-2 group overflow-hidden rounded-xl shadow-md cursor-pointer relative" onclick="abrirModal(this)">
+                    <img src="img/20251128_210106.jpg" alt="Galeria foto 1" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-rose-900/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="text-white font-ui font-medium">Ver</span>
+                    </div>
+                </div>
+
+                <!-- Imagem Vertical (Ocupa 2 linhas) -->
+                <div class="row-span-2 group overflow-hidden rounded-xl shadow-md cursor-pointer relative" onclick="abrirModal(this)">
+                    <img src="img/20251128_192002.jpg" alt="Galeria foto 1" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-rose-900/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="text-white font-ui font-medium">Ver</span>
+                    </div>
+                </div>
+                
+                 <!-- Imagem Quadrada -->
+                <div class="group overflow-hidden rounded-xl shadow-md cursor-pointer relative" onclick="abrirModal(this)">
+                    <img src="img/20251123_190542.jpg" alt="Galeria foto 4" class="w-full h-48 md:h-64 object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-rose-900/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="text-white font-ui font-medium">Ver</span>
+                    </div>
+                </div>
+                
+                    
+                 <!-- Imagem Quadrada -->
+                <div class="group overflow-hidden rounded-xl shadow-md cursor-pointer relative" onclick="abrirModal(this)">
+                    <img src="img/20251128_192000.jpg" alt="Galeria foto 4" class="w-full h-48 md:h-64 object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-rose-900/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="text-white font-ui font-medium">Ver</span>
+                    </div>
+                </div>
+                
+                 <!-- Imagem Horizontal (Ocupa 2 colunas em telas médias) -->
+                <div class="col-span-2 md:col-span-2 group overflow-hidden rounded-xl shadow-md cursor-pointer relative" onclick="abrirModal(this)">
+                    <img src="img/20251107_163125.jpg" alt="Galeria foto 3" class="w-full h-48 md:h-80 object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-rose-900/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="text-white font-ui font-medium">Ver</span>
+                    </div>
+                </div>
+
+                <!-- Imagem Quadrada -->
+                <div class="group overflow-hidden rounded-xl shadow-md cursor-pointer relative" onclick="abrirModal(this)">
+                    <img src="img/20251114_213948.jpg" alt="Galeria foto 4" class="w-full h-48 md:h-80 object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-rose-900/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="text-white font-ui font-medium">Ver</span>
+                    </div>
+                </div>
+
+                <!-- Imagem Quadrada -->
+                <div class="group overflow-hidden rounded-xl shadow-md cursor-pointer relative" onclick="abrirModal(this)">
+                    <img src="img/20251107_163032.jpg" alt="Galeria foto 4" class="w-full h-48 md:h-64 object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-rose-900/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="text-white font-ui font-medium">Ver</span>
+                    </div>
+                </div>
+                 <!-- Imagem Quadrada -->
+                <div class="group overflow-hidden rounded-xl shadow-md cursor-pointer relative" onclick="abrirModal(this)">
+                    <img src="img/IMG-20260614-WA0013.jpg" alt="Galeria foto 4" class="w-full h-48 md:h-64 object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-rose-900/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="text-white font-ui font-medium">Ver</span>
+                    </div>
+                </div>
+                
+                <!-- Imagem Quadrada -->
+                <div class="group overflow-hidden rounded-xl shadow-md cursor-pointer relative" onclick="abrirModal(this)">
+                    <img src="img/20251107_162734.jpg" alt="Galeria foto 4" class="w-full h-48 md:h-64 object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-rose-900/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="text-white font-ui font-medium">Ver</span>
+                    </div>
+                </div>
+                
+                 <!-- Imagem Vertical (Ocupa 2 linhas) -->
+                <div class="row-span-2 group overflow-hidden rounded-xl shadow-md cursor-pointer relative" onclick="abrirModal(this)">
+                    <img src="img/20251107_162949.jpg" alt="Galeria foto 1" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-rose-900/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="text-white font-ui font-medium">Ver</span>
+                    </div>
+                </div>
+
+                 <!-- Imagem Vertical (Ocupa 2 linhas) -->
+                <div class="row-span-2 group overflow-hidden rounded-xl shadow-md cursor-pointer relative" onclick="abrirModal(this)">
+                    <img src="img/20251107_162941.jpg" alt="Galeria foto 1" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-rose-900/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="text-white font-ui font-medium">Ver</span>
+                    </div>
+                </div>
+               
+                 <!-- Imagem Vertical (Ocupa 2 linhas) -->
+                <div class="row-span-2 group overflow-hidden rounded-xl shadow-md cursor-pointer relative" onclick="abrirModal(this)">
+                    <img src="img/20251107_162725.jpg" alt="Galeria foto 1" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-rose-900/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="text-white font-ui font-medium">Ver</span>
+                    </div>
+                </div>
+               
+                <!-- Imagem Vertical (Ocupa 2 linhas) -->
+                <div class="row-span-2 group overflow-hidden rounded-xl shadow-md cursor-pointer relative" onclick="abrirModal(this)">
+                    <img src="img/20260613_175436.jpg" alt="Galeria foto 1" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-rose-900/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="text-white font-ui font-medium">Ver</span>
+                    </div>
+                </div>
+               
+                 <!-- Imagem Vertical (Ocupa 2 linhas) -->
+                <div class="row-span-2 group overflow-hidden rounded-xl shadow-md cursor-pointer relative" onclick="abrirModal(this)">
+                    <img src="img/20260613_211103.jpg" alt="Galeria foto 1" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-rose-900/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="text-white font-ui font-medium">Ver</span>
+                    </div>
+                </div>
+
+                <!-- Imagem Vertical (Ocupa 2 linhas) -->
+                <div class="row-span-2 group overflow-hidden rounded-xl shadow-md cursor-pointer relative" onclick="abrirModal(this)">
+                    <img src="img/20260614_132109.jpg" alt="Galeria foto 1" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-rose-900/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="text-white font-ui font-medium">Ver</span>
+                    </div>
+                </div>
+               
+                 <!-- Imagem Vertical (Ocupa 2 linhas) -->
+                <div class="row-span-2 group overflow-hidden rounded-xl shadow-md cursor-pointer relative" onclick="abrirModal(this)">
+                    <img src="img/20260614_132121.jpg" alt="Galeria foto 1" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-rose-900/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="text-white font-ui font-medium">Ver</span>
+                    </div>
+                </div>
+               
+                 <!-- Imagem Vertical (Ocupa 2 linhas) -->
+                <div class="row-span-2 group overflow-hidden rounded-xl shadow-md cursor-pointer relative" onclick="abrirModal(this)">
+                    <img src="img/20251107_162747.jpg" alt="Galeria foto 1" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-rose-900/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="text-white font-ui font-medium">Ver</span>
+                    </div>
+                </div>
+               
+                     <!-- Imagem Quadrada -->
+                <div class="group overflow-hidden rounded-xl shadow-md cursor-pointer relative" onclick="abrirModal(this)">
+                    <img src="img/20260614_132117.jpg" alt="Galeria foto 4" class="w-full h-48 md:h-64 object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-rose-900/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="text-white font-ui font-medium">Ver</span>
+                    </div>
+                </div>
+                
+                <!-- Imagem Quadrada -->
+                <div class="group overflow-hidden rounded-xl shadow-md cursor-pointer relative" onclick="abrirModal(this)">
+                    <img src="img/20250808_214745.jpg" alt="Galeria foto 4" class="w-full h-48 md:h-64 object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-rose-900/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="text-white font-ui font-medium">Ver</span>
+                    </div>
+                </div>
+
+                    <!-- Imagem Quadrada -->
+                <div class="group overflow-hidden rounded-xl shadow-md cursor-pointer relative" onclick="abrirModal(this)">
+                    <img src="img/20250808_214749.jpg" alt="Galeria foto 4" class="w-full h-48 md:h-64 object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-rose-900/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="text-white font-ui font-medium">Ver</span>
+                    </div>
+                </div>
+                
+                <!-- Imagem Quadrada -->
+                <div class="group overflow-hidden rounded-xl shadow-md cursor-pointer relative" onclick="abrirModal(this)">
+                    <img src="img/20251004_202050.jpg" alt="Galeria foto 4" class="w-full h-48 md:h-64 object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-rose-900/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="text-white font-ui font-medium">Ver</span>
+                    </div>
+                </div>
+
+                  <!-- Imagem Quadrada -->
+                <div class="group overflow-hidden rounded-xl shadow-md cursor-pointer relative" onclick="abrirModal(this)">
+                    <img src="img/20260724_203818.jpg" alt="Galeria foto 4" class="w-full h-48 md:h-64 object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-rose-900/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="text-white font-ui font-medium">Ver</span>
+                    </div>
+                </div>
+
+
+
+                <!-- Imagem Vertical (Ocupa 2 linhas) -->
+                <div class="row-span-2 group overflow-hidden rounded-xl shadow-md cursor-pointer relative" onclick="abrirModal(this)">
+                    <img src="img/20260704_190651.jpg" alt="Galeria foto 1" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-rose-900/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="text-white font-ui font-medium">Ver</span>
+                    </div>
+                </div>
+               
+                 <!-- Imagem Vertical (Ocupa 2 linhas) -->
+                <div class="row-span-2 group overflow-hidden rounded-xl shadow-md cursor-pointer relative" onclick="abrirModal(this)">
+                    <img src="img/20260228_215230 (1)jdj.jpg" alt="Galeria foto 1" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-rose-900/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="text-white font-ui font-medium">Ver</span>
+                    </div>
+                </div>
+
+                 <!-- Imagem Quadrada -->
+                <div class="group overflow-hidden rounded-xl shadow-md cursor-pointer relative" onclick="abrirModal(this)">
+                    <img src="img/20260228_205824.jpg" alt="Galeria foto 4" class="w-full h-48 md:h-64 object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-rose-900/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="text-white font-ui font-medium">Ver</span>
+                    </div>
+                </div>
+
+                 <!-- Imagem Quadrada -->
+                <div class="group overflow-hidden rounded-xl shadow-md cursor-pointer relative" onclick="abrirModal(this)">
+                    <img src="img/20260205_154027.jpg" alt="Galeria foto 4" class="w-full h-48 md:h-64 object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-rose-900/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="text-white font-ui font-medium">Ver</span>
+                    </div>
+                </div>
+
+                 <!-- Imagem Vertical (Ocupa 2 linhas) -->
+                <div class="row-span-2 group overflow-hidden rounded-xl shadow-md cursor-pointer relative" onclick="abrirModal(this)">
+                    <img src="img/20260216_173437.jpg" alt="Galeria foto 1" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-rose-900/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="text-white font-ui font-medium">Ver</span>
+                    </div>
+                </div>
+               
+                 <!-- Imagem Vertical (Ocupa 2 linhas) -->
+                <div class="row-span-2 group overflow-hidden rounded-xl shadow-md cursor-pointer relative" onclick="abrirModal(this)">
+                    <img src="img/20260216_171822.jpg" alt="Galeria foto 1" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-rose-900/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="text-white font-ui font-medium">Ver</span>
+                    </div>
+                </div>
+
+                  <!-- Imagem Vertical (Ocupa 2 linhas) -->
+                <div class="row-span-2 group overflow-hidden rounded-xl shadow-md cursor-pointer relative" onclick="abrirModal(this)">
+                    <img src="img/20251230_200909.jpg" alt="Galeria foto 1" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-rose-900/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="text-white font-ui font-medium">Ver</span>
+                    </div>
+                </div>
+               
+                   <!-- Imagem Horizontal (Ocupa 2 colunas em telas médias) -->
+                <div class="col-span-2 md:col-span-2 group overflow-hidden rounded-xl shadow-md cursor-pointer relative" onclick="abrirModal(this)">
+                    <img src="img/20260216_172800.jpg" alt="Galeria foto 3" class="w-full h-48 md:h-80 object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-rose-900/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="text-white font-ui font-medium">Ver</span>
+                    </div>
+                </div>
+
+                
+                 <!-- Imagem Vertical (Ocupa 2 linhas) -->
+                <div class="row-span-2 group overflow-hidden rounded-xl shadow-md cursor-pointer relative" onclick="abrirModal(this)">
+                    <img src="img/20260123_213241.jpg" alt="Galeria foto 1" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-rose-900/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="text-white font-ui font-medium">Ver</span>
+                    </div>
+                </div>
+
+
+                <!-- Imagem Quadrada -->
+                <div class="group overflow-hidden rounded-xl shadow-md cursor-pointer relative" onclick="abrirModal(this)">
+                    <img src="img/20260119_212709.jpg" alt="Galeria foto 4" class="w-full h-48 md:h-64 object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-rose-900/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="text-white font-ui font-medium">Ver</span>
+                    </div>
+                </div>
+
+                 <!-- Imagem Quadrada -->
+                <div class="group overflow-hidden rounded-xl shadow-md cursor-pointer relative" onclick="abrirModal(this)">
+                    <img src="img/20251214_020950.jpg" alt="Galeria foto 4" class="w-full h-48 md:h-64 object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-rose-900/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="text-white font-ui font-medium">Ver</span>
+                    </div>
+                </div>
+
+                  <!-- Imagem Quadrada -->
+                <div class="group overflow-hidden rounded-xl shadow-md cursor-pointer relative" onclick="abrirModal(this)">
+                    <img src="img/20251218_182030.jpg" alt="Galeria foto 4" class="w-full h-48 md:h-64 object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-rose-900/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="text-white font-ui font-medium">Ver</span>
+                    </div>
+                </div>
+
+                 <!-- Imagem Quadrada -->
+                <div class="group overflow-hidden rounded-xl shadow-md cursor-pointer relative" onclick="abrirModal(this)">
+                    <img src="img/20251218_182033.jpg" alt="Galeria foto 4" class="w-full h-48 md:h-64 object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-rose-900/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="text-white font-ui font-medium">Ver</span>
+                    </div>
+                </div>
+
+                  <!-- Imagem Quadrada -->
+                <div class="group overflow-hidden rounded-xl shadow-md cursor-pointer relative" onclick="abrirModal(this)">
+                    <img src="img/20251214_020933.jpg" alt="Galeria foto 4" class="w-full h-48 md:h-64 object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-rose-900/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="text-white font-ui font-medium">Ver</span>
+                    </div>
+                </div>
+
+                 <!-- Imagem Quadrada -->
+                <div class="group overflow-hidden rounded-xl shadow-md cursor-pointer relative" onclick="abrirModal(this)">
+                    <img src="img/20251214_020920.jpg" alt="Galeria foto 4" class="w-full h-48 md:h-64 object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-rose-900/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="text-white font-ui font-medium">Ver</span>
+                    </div>
+                </div>
+
+                  <!-- Imagem Vertical (Ocupa 2 linhas) -->
+                <div class="row-span-2 group overflow-hidden rounded-xl shadow-md cursor-pointer relative" onclick="abrirModal(this)">
+                    <img src="img/20251213_203352.jpg" alt="Galeria foto 1" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-rose-900/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="text-white font-ui font-medium">Ver</span>
+                    </div>
+                </div>
+
+                   <!-- Imagem Vertical (Ocupa 2 linhas) -->
+                <div class="row-span-2 group overflow-hidden rounded-xl shadow-md cursor-pointer relative" onclick="abrirModal(this)">
+                    <img src="img/20250924_183227.jpg" alt="Galeria foto 1" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-rose-900/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="text-white font-ui font-medium">Ver</span>
+                    </div>
+                </div>
+
+                <!-- Imagem Quadrada -->
+                <div class="group overflow-hidden rounded-xl shadow-md cursor-pointer relative" onclick="abrirModal(this)">
+                    <img src="img/20250924_152342.jpg" alt="Galeria foto 4" class="w-full h-48 md:h-64 object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-rose-900/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="text-white font-ui font-medium">Ver</span>
+                    </div>
+                </div>
+
+                <!-- Imagem Horizontal (Ocupa 2 colunas em telas médias) -->
+                <div class="col-span-2 md:col-span-2 group overflow-hidden rounded-xl shadow-md cursor-pointer relative" onclick="abrirModal(this)">
+                    <img src="img/20251213_224000.jpg" alt="Galeria foto 3" class="w-full h-48 md:h-80 object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-rose-900/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="text-white font-ui font-medium">Ver</span>
+                    </div>
+                </div>
+
+                
+                
+                  <!-- Imagem Quadrada -->
+                <div class="group overflow-hidden rounded-xl shadow-md cursor-pointer relative" onclick="abrirModal(this)">
+                    <img src="img/20250924_095452.jpg" alt="Galeria foto 4" class="w-full h-48 md:h-80 object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-rose-900/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="text-white font-ui font-medium">Ver</span>
+                    </div>
+                </div>
+
+                  <!-- Imagem Quadrada -->
+                <div class="group overflow-hidden rounded-xl shadow-md cursor-pointer relative" onclick="abrirModal(this)">
+                    <img src="img/Screenshot_20250916_194822_Instagram[1].jpg" alt="Galeria foto 4" class="w-full h-48 md:h-80 object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-rose-900/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="text-white font-ui font-medium">Ver</span>
+                    </div>
+                </div>
+
+                <!-- Imagem Horizontal (Ocupa 2 colunas em telas médias) -->
+                <div class="col-span-2 md:col-span-2 group overflow-hidden rounded-xl shadow-md cursor-pointer relative" onclick="abrirModal(this)">
+                    <img src="img/20251213_223952.jpg" alt="Galeria foto 3" class="w-full h-48 md:h-80 object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-rose-900/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="text-white font-ui font-medium">Ver</span>
+                    </div>
+                </div>
+                
+                
+                
+             
+                
+                <!-- Imagem Vertical (Ocupa 2 linhas) -->
+                <div class="row-span-2 group overflow-hidden rounded-xl shadow-md cursor-pointer relative" onclick="abrirModal(this)">
+                    <img src="img/20250924_153521.jpg" alt="Galeria foto 1" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-rose-900/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="text-white font-ui font-medium">Ver</span>
+                    </div>
+                </div>
+
+                
+              
+                
+                 <!-- Imagem Vertical (Ocupa 2 linhas) -->
+                <div class="row-span-2 group overflow-hidden rounded-xl shadow-md cursor-pointer relative" onclick="abrirModal(this)">
+                    <img src="img/20250924_091149.jpg" alt="Galeria foto 1" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-rose-900/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="text-white font-ui font-medium">Ver</span>
+                    </div>
+                </div>
+
+                 <!-- Imagem Vertical (Ocupa 2 linhas) -->
+                <div class="row-span-2 group overflow-hidden rounded-xl shadow-md cursor-pointer relative" onclick="abrirModal(this)">
+                    <img src="img/20260614_014952.jpg" alt="Galeria foto 1" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-rose-900/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="text-white font-ui font-medium">Ver</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+         <!-- Mensagem Final -->
+        <section class="w-full my-16 md:my-20 animate-fade-in delay-400">
+            <div class="w-full px-6 md:px-12 lg:px-24"> <!-- Ajuste de padding lateral -->
+                <p class="text-lg md:text-xl leading-relaxed text-black italic font-semibold text-justify tracking-wide"> <!-- Classes de extensão -->
+                    Que cada novo dia ao seu lado seja repleto de sorrisos, carinhos e muito amor. Obrigado por ser o meu porto seguro e a minha maior felicidade!
+                </p>
+             </div>
+        </section>
+        
+        <footer class="mt-32 py-8 text-center text-rose-800 font-titulo text-exlg border-t">
+            <p>Feito com muito amor para você.</p>
+        </footer>
+
+    </div>
+
+    <!-- Modal (Lightox) para ver fotos/vídeos ampliados -->
+    <div id="media-modal" class="fixed inset-0 bg-black/90 z-50 hidden flex items-center justify-center p-4 transition-opacity opacity-0">
+        <!-- Botão Fechar -->
+        <button onclick="fecharModal()" class="absolute top-4 right-4 md:top-8 md:right-8 text-white/70 hover:text-white bg-black/50 hover:bg-black/80 rounded-full p-2 transition-colors z-50">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 256 256"><path d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"></path></svg>
+        </button>
+
+        <!-- Conteúdo (Imagem ou Vídeo) será injetado aqui pelo JS -->
+        <div id="modal-content" class="w-full max-w-5xl max-h-full flex justify-center items-center relative">
+            <!-- Injetado via JS -->
+        </div>
+    </div>
+
+    <script>
+        /**
+         * ATENÇÃO: ALTERE A DATA ABAIXO PARA O INÍCIO DO SEU NAMORO
+         * Formato: Ano, Mês (0-11, Janeiro é 0), Dia, Hora, Minuto, Segundo
+         * Exemplo para 28 de Novembro de 2025 às 00:00: new Date(2025, 10, 28, 0, 0, 0)
+         */
+        const dataInicioNamoro = new Date(2025, 10, 28, 0, 0, 0); // 28 de Novembro de 2025 (mês 10 = Novembro)
+
+        function calcularTotaisTempo() {
+            // Um ano comum tem 365 dias (vamos simplificar para este mostrador de "1 ano")
+            const diasEmUmAno = 365;
+            const horasEmUmAno = diasEmUmAno * 24;
+            const minutosEmUmAno = horasEmUmAno * 60;
+            const segundosEmUmAno = minutosEmUmAno * 60;
+
+            // Formata os números com pontos para milhares (ex: 525.600)
+            const formatador = new Intl.NumberFormat('pt-BR');
+
+            // Atualiza os elementos na tela
+            document.getElementById('total-dias').innerText = formatador.format(diasEmUmAno);
+            document.getElementById('total-horas').innerText = formatador.format(horasEmUmAno);
+            document.getElementById('total-minutos').innerText = formatador.format(minutosEmUmAno);
+            document.getElementById('total-segundos').innerText = formatador.format(segundosEmUmAno);
+        }
+
+
+        function atualizarCronometro() {
+            // Pega a data e hora atual
+            const agora = new Date();
+            
+            // Calcula a diferença em milissegundos
+            let diferenca = agora - dataInicioNamoro;
+
+            // Lógica para lidar com datas futuras (caso tenha colocado errado)
+            if (diferenca < 0) diferenca = 0;
+
+            // Lógica para calcular anos, meses e dias considerando a variação dos meses e anos bissextos
+            // O JavaScript nos ajuda a fazer isso manipulando objetos Date
+            
+            let anos = agora.getFullYear() - dataInicioNamoro.getFullYear();
+            let meses = agora.getMonth() - dataInicioNamoro.getMonth();
+            let dias = agora.getDate() - dataInicioNamoro.getDate();
+
+            // Ajuste se o dia atual for menor que o dia de início
+            if (dias < 0) {
+                meses--;
+                // Pega o último dia do mês anterior para calcular os dias corretos
+                const ultimoDiaMesAnterior = new Date(agora.getFullYear(), agora.getMonth(), 0).getDate();
+                dias += ultimoDiaMesAnterior;
+            }
+
+            // Ajuste se o mês atual for menor que o mês de início
+            if (meses < 0) {
+                anos--;
+                meses += 12;
+            }
+
+            // Cálculo das horas, minutos e segundos a partir do resto dos dias
+            // Pegamos o tempo total em milissegundos
+            const diferencaTotalMs = agora.getTime() - dataInicioNamoro.getTime();
+            
+            // Calculamos o resto das horas, minutos e segundos ignorando os dias inteiros passados
+            // Pois a precisão de dias, meses e anos já foi calculada com o calendário
+            
+            const horas = Math.floor((diferencaTotalMs / (1000 * 60 * 60)) % 24);
+            const minutos = Math.floor((diferencaTotalMs / 1000 / 60) % 60);
+            const segundos = Math.floor((diferencaTotalMs / 1000) % 60);
+
+            // Atualiza o HTML com os valores formatados
+            document.getElementById('anos').innerText = anos;
+            document.getElementById('meses').innerText = meses;
+            document.getElementById('dias').innerText = dias;
+            
+            // Adiciona um zero à esquerda para números menores que 10 nas horas/minutos/seg
+            document.getElementById('horas').innerText = horas.toString().padStart(2, '0');
+            document.getElementById('minutos').innerText = minutos.toString().padStart(2, '0');
+            document.getElementById('segundos').innerText = segundos.toString().padStart(2, '0');
+        }
+
+        // Atualiza imediatamente ao carregar a página
+        atualizarCronometro();
+        calcularTotaisTempo(); // Calcula e exibe os totais de 1 ano
+
+        // Configura para atualizar a cada 1000 milissegundos (1 segundo)
+        setInterval(atualizarCronometro, 1000);
+
+        // LÓGICA DO MODAL DA GALERIA (LIGHTBOX)
+        const modal = document.getElementById('media-modal');
+        const modalContent = document.getElementById('modal-content');
+
+        function abrirModal(elemento, tipo = 'imagem') {
+            modalContent.innerHTML = ''; // Limpa o conteúdo anterior
+
+            if (tipo === 'imagem') {
+                const imgOriginal = elemento.querySelector('img');
+                const novaImg = document.createElement('img');
+                novaImg.src = imgOriginal.src;
+                novaImg.alt = imgOriginal.alt;
+                novaImg.className = 'max-w-full max-h-[90vh] object-contain rounded shadow-2xl';
+                modalContent.appendChild(novaImg);
+            } else if (tipo === 'video') {
+                const videoOriginal = elemento.querySelector('video');
+                const novoVideo = document.createElement('video');
+                // Copia os sources (normalmente 1 só)
+                novoVideo.innerHTML = videoOriginal.innerHTML; 
+                novoVideo.controls = true; // Adiciona controles de play/pause no modal
+                novoVideo.autoplay = true; // Toca automaticamente ao abrir
+                novoVideo.className = 'max-w-full max-h-[90vh] rounded shadow-2xl bg-black';
+                modalContent.appendChild(novoVideo);
+            }
+
+            // Exibe o modal
+            modal.classList.remove('hidden');
+            // Pequeno delay para a transição de opacidade funcionar
+            setTimeout(() => {
+                modal.classList.remove('opacity-0');
+            }, 10);
+            
+            // Impede a rolagem do fundo
+            document.body.style.overflow = 'hidden'; 
+        }
+
+        function fecharModal() {
+            modal.classList.add('opacity-0');
+            
+            // Aguarda a transição terminar para esconder de vez e limpar o conteúdo (para pausar vídeos)
+            setTimeout(() => {
+                modal.classList.add('hidden');
+                modalContent.innerHTML = ''; 
+                document.body.style.overflow = 'auto'; // Restaura rolagem
+            }, 300); // 300ms de acordo com a classe do Tailwind
+        }
+
+        // Fechar modal clicando fora do conteúdo
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal || e.target === modalContent) {
+                fecharModal();
+            }
+        });
+        
+        // Fechar modal com a tecla ESC
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+                fecharModal();
+            }
+        });
+
+        // LÓGICA DO CARROSSEL DE FOTOS
+        document.addEventListener('DOMContentLoaded', () => {
+            const carrossseis = document.querySelectorAll('.carousel-container');
+
+            carrossseis.forEach(carrossel => {
+                const track = carrossel.querySelector('.carousel-track');
+                const images = track.querySelectorAll('img');
+                const prevBtn = carrossel.querySelector('.prev-btn');
+                const nextBtn = carrossel.querySelector('.next-btn');
+                const indicators = carrossel.querySelectorAll('.indicators span');
+                let currentSlide = 0;
+                const totalSlides = images.length;
+
+                // Ocultar botões se houver apenas 1 imagem
+                if (totalSlides <= 1) {
+                    if(prevBtn) prevBtn.style.display = 'none';
+                    if(nextBtn) nextBtn.style.display = 'none';
+                    if(carrossel.querySelector('.indicators')) carrossel.querySelector('.indicators').style.display = 'none';
+                    return;
+                }
+
+                function updateCarousel() {
+                    // Move a trilha de imagens
+                    track.style.transform = `translateX(-${currentSlide * 100}%)`;
+                    
+                    // Atualiza as bolinhas indicadoras
+                    indicators.forEach((dot, index) => {
+                        if (index === currentSlide) {
+                            dot.classList.remove('opacity-50');
+                            dot.classList.add('opacity-100');
+                        } else {
+                            dot.classList.remove('opacity-100');
+                            dot.classList.add('opacity-50');
+                        }
+                    });
+                }
+
+                nextBtn.addEventListener('click', (e) => {
+                    e.preventDefault(); // Previne comportamento padrão (útil se estiver em um link)
+                    currentSlide = (currentSlide + 1) % totalSlides;
+                    updateCarousel();
+                });
+
+                prevBtn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+                    updateCarousel();
+                });
+            });
+        });
+    </script>
+</body>
+</html>
