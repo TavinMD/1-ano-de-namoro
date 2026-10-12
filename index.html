@@ -443,12 +443,7 @@
                                 <!-- Foto 2 do dia do pedido -->
                                 <img src="img/IMG-20251129-WA0019 (1).jpg" alt="Nosso pedido de namoro 2" class="w-full h-auto object-cover flex-shrink-0">
                                 
-                                
-                                <div class="w-full h-auto object-cover flex-shrink-0 relative bg-black flex items-center justify-center">
-                                    <video class="w-full h-[300px] object-cover" controls playsinline>
-                                        <source src="vid/VID-20251128-WA0084.mp4" type="video/mp4">
-                                    </video>
-                                </div>
+                        
                             </div>
 
                              <!-- Controles do Carrossel -->
@@ -518,28 +513,14 @@
                 </div>
 
                 <!-- Imagem Quadrada -->
-                <div class="group overflow-hidden rounded-xl shadow-md cursor-pointer relative" onclick="abrirModal(this)">
-                    <img src="img/1000122884.jpg" alt="Galeria foto 2" class="w-full h-48 md:h-64 object-cover transition-transform duration-700 group-hover:scale-110">
+                <div class="col-span-2 group overflow-hidden rounded-xl shadow-md cursor-pointer relative" onclick="abrirModal(this)">
+                    <img src="img/1000122884.jpg" alt="Galeria foto 2" class="w-full h-160 md:h-200 object-cover transition-transform duration-700 group-hover:scale-120">
                     <div class="absolute inset-0 bg-rose-900/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                         <span class="text-white font-ui font-medium">Ver</span>
                     </div>
                 </div>
 
-                <!-- Vídeo Quadrado -->
-                <div class="group overflow-hidden rounded-xl shadow-md cursor-pointer relative bg-gray-900" onclick="abrirModal(this, 'video')">
-                    <!-- O poster é a imagem que aparece antes de dar play. O src no HTML normal não faz autoplay para não gastar dados. -->
-                    <video class="w-full h-48 md:h-64 object-cover opacity-80 group-hover:opacity-100 transition-opacity" muted loop playsinline poster="https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80">
-                        <!-- Substitua o src abaixo por um vídeo real (mp4). Ex: src="meu-video.mp4" -->
-                        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
-                        Seu navegador não suporta vídeos.
-                    </video>
-                    <!-- Ícone de Play para indicar que é um vídeo -->
-                    <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
-                        <div class="bg-white/80 rounded-full p-3 group-hover:scale-110 transition-transform">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#e11d48" viewBox="0 0 256 256"><path d="M240,128a15.74,15.74,0,0,1-7.6,13.51L88.32,229.65a16,16,0,0,1-16.2.3A15.86,15.86,0,0,1,64,216.13V39.87a15.86,15.86,0,0,1,8.12-13.82,16,16,0,0,1,16.2.3L232.4,114.49A15.74,15.74,0,0,1,240,128Z"></path></svg>
-                        </div>
-                    </div>
-                </div>
+    
 
                  <!-- Imagem Horizontal (Ocupa 2 colunas em telas médias) -->
                 <div class="col-span-2 md:col-span-2 group overflow-hidden rounded-xl shadow-md cursor-pointer relative" onclick="abrirModal(this)">
